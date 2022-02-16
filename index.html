@@ -18,8 +18,13 @@
       <h1 class="main__title">We are launching <span class="main--bold">soon!</span></h1>
       <p class="main__desc">Subscribe and get notified</p>
       <form action="javascript:void(0);" method="get">
-        <input type="text" placeholder="Your email address..." class="form__input">
-        <button class="form__btn">Notify Me</button>
+        <div class="form__input--column">
+          <input type="text" placeholder="Your email address..." class="form__input" id="email">
+          <p class="form__validate" id="validate">Please provide a valid email address</p>
+        </div>
+        <div class="form__btn--column">
+        <button class="form__btn" id="btn">Notify Me</button>
+        </div>
       </form>
       <img src="images/illustration-dashboard.png" alt="illustration dashboard" class="main__dashboard">
     </div>

@@ -64,13 +64,26 @@ form {
 }
 
 .form__input {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   width: 100%;
   font-size: 1rem;
-  color: var(--cl-gray);
+  color: var(--cl-black);
   padding: .75em 2em;
   border-radius: 10rem;
-  border: 1px solid var(--cl-pale-blue);
+  border: none;
+  outline: 1px solid var(--cl-pale-blue);
+}
+
+.form__input::placeholder {
+  color: var(--cl-gray);
+}
+
+.form__input:focus {
+  outline-width: 2px;
+}
+
+.form__input--column {
+  margin-bottom: 1rem;
 }
 
 .form__btn {
@@ -96,7 +109,12 @@ form {
   margin: 5rem 0 7rem;
 }
 
-
+.form__validate {
+  display: none;
+  font-size: .8rem;
+  font-style: italic;
+  color: var(--cl-light-red);
+}
 
 .main--bold {
   font-weight: 700;
@@ -133,13 +151,18 @@ ion-icon + ion-icon {
     align-items: baseline;
   }
 
-  .form__btn {
+  .form__btn--column {
     margin-left: 1rem;
     flex: 1;
   }
 
-  .form__input {
+  .form__input--column {
     flex: 2;
+  }
+
+  .form__validate {
+    text-align: left;
+    padding-left: 2rem;
   }
 
 }
