@@ -3,3 +3,143 @@
 
 *, *::before, *::after {box-sizing: inherit;}
 html {box-sizing: border-box;}
+
+:root {
+  --cl-blue: hsl(223, 87%, 63%);
+  --cl-pale-blue: hsl(223, 100%, 88%);
+  --cl-light-red: hsl(354, 100%, 66%);
+  --cl-gray: hsl(0, 0%, 59%);
+  --cl-very-dark-blue: hsl(209, 33%, 12%);
+  --cl-white: hsl(0, 0%, 100%);
+  --cl-black: hsl(0, 0%, 0%);
+
+  --fs-default: 20px;
+
+  font: 300 var(--fs-default) 'Libre Franklin';
+}
+
+@media all and (min-width: 768px) {
+  :root {
+    --fs-default: 24px;
+  }
+}
+
+body {
+  background: var(--cl-white);
+  text-align: center;
+}
+
+header {
+  margin: 5rem 0 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.main__title {
+  font-size: 1.5rem;
+  color: var(--cl-gray);
+}
+
+.main__desc {
+  margin: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input,
+.form__btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.form__input {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--cl-gray);
+  padding: .75em 2em;
+  border-radius: 10rem;
+  border: 1px solid var(--cl-pale-blue);
+}
+
+.form__btn {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--cl-blue);
+  color: var(--cl-white);
+  padding: .75em 2em;
+  border-radius: 10rem;
+  border: none;
+  transition: opacity 1s;
+}
+
+.form__btn:hover {
+  opacity: .8;
+  transition: opacity 1s;
+  cursor: pointer;
+}
+
+.main__dashboard {
+  width: 100%;
+  margin: 5rem 0 7rem;
+}
+
+
+
+.main--bold {
+  font-weight: 700;
+  color: var(--cl-black);
+}
+
+ion-icon {
+  font-size: 1.5rem;
+  color: var(--cl-blue);
+  border: 2px solid var(--cl-pale-blue);
+  border-radius: 10rem;
+  padding: .5rem;
+  transition: color 1s, background-color 1s;
+}
+
+ion-icon:hover {
+  color: var(--cl-white);
+  background-color: var(--cl-blue);
+  transition: color 1s, background-color 1s;
+}
+
+ion-icon + ion-icon {
+  margin-left: .5rem;
+}
+
+.footer__cr {
+  margin: 2rem 0;
+  color: var(--cl-gray);
+}
+
+@media all and (min-width: 768px) {
+  form {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .form__btn {
+    margin-left: 1rem;
+    flex: 1;
+  }
+
+  .form__input {
+    flex: 2;
+  }
+
+}
